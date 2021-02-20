@@ -1,9 +1,6 @@
-import sys
-
 import pandas as pd
 import numpy as np
 from scipy import interpolate
-import matplotlib.pyplot as plt
 
 
 inp_1 = "temperatures_interpolated.csv"
@@ -38,17 +35,9 @@ joint_data = pd.concat(joint_sliced_data)
 
 joint_data = joint_data.loc[:, ~joint_data.columns.str.contains('^Unnamed')]
 
-t_mean = joint_data["temp"].mean()
-t_std = joint_data["temp"].std()
-
-e_mean = joint_data["evi"].mean()
-e_std = joint_data["evi"].std()
-
-print("Mean temperature, temp std, mean evi and temp std:")
-print(t_mean, t_std, e_mean, e_std)
-joint_data["temp"] = (joint_data["temp"] - t_mean) / t_std
-joint_data["evi"] = (joint_data["evi"] - e_mean) / e_std
 joint_data.reset_index(drop=True, inplace=True)
+
+print(joint_data.head())
 
 """t_1_data = joint_data[joint_data["time"] == times[10]]
 
