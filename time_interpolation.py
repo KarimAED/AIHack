@@ -67,7 +67,6 @@ for i,year in enumerate(years):
     for day in days:
         timestamp = pd.to_datetime(datetime.datetime(year, 1, 1)+
                                    datetime.timedelta(int(day-1)))
-        # dayyear=365.25 * (i+1) + day
         days_list_EVI.append(timestamp)
 
 timestart = pd.to_datetime('2000-01-01T00:00:00') # as zeroth
@@ -119,7 +118,9 @@ for i,lat in enumerate(listlatitudes):
 print(finallist)
 #save final dataset
 finallist.to_csv('temperatures_interpolated.csv')
-        
+
+
+#%%
     
     
     
