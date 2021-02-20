@@ -1,1 +1,53 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import seaborn as sns
+
+#%%
+df_ERA5 = pd.read_csv('ERA5.csv')
+
+df_ERA5['time'] = pd.to_datetime(df_ERA5['time'])
+
+df_ERA5['t2m'] = df_ERA5['t2m'] -273 #Converting to Celsius
+
+df_2015 = df_ERA5[df_ERA5['time'] == pd.to_datetime('2015-01-01')] #Converting to datetime data type
+
+
+gdf = gpd.read_file("illinois-counties.geojson")
+df = pd.read_csv("EVI_stacked.csv")
+
+coolwarm = plt.cm.get_cmap('coolwarm')
+reversed_coolwarm = coolwarm.reversed()
+
+df_plot = df[df["year"]==2019]
+
+fig, ax = plt.subplots(figsize=(5, 5))
+gdf.plot(ax=ax, facecolor='none', edgecolor='red')
+plt.title('Variation of temperature in 2015')
+plt.xlabel('latitude')
+plt.ylabel('longitude')
+plot1 = plt.scatter(df_2015["long"], df_2015["lat"], c = df_2015['t2m'], cmap = reversed_coolwarm)
+plt.colorbar(plot1)
+
+#%%
+
+df_IL_yield = pd.read_csv('IL_yield.csv')
+df_count_coor = df_2015.groupby('county').mean()[['lat','long']]
+
+df_yield_2015 = df_IL_yield[df_IL_yield['year'] == 2015].groupby('county').mean() #Getting the average yield of the counties in 2015
+df_yield_2015['lat'] = df_count_coor['lat']
+df_yield_2015['long'] = df_count_coor['long']
+
+
+fig, ax = plt.subplots(figsize=(5, 5))
+gdf.plot(ax=ax, facecolor='none', edgecolor='red')
+plt.title('Variation of yield in 2015')
+plt.xlabel('latitude')
+plt.ylabel('longitude')
+
+plot2 = plt.scatter(df_yield_2015["long"], df_yield_2015["lat"], c = df_yield_2015['yield'], cmap = reversed_coolwarm)
+plt.colorbar(plot)
+
+
 
