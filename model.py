@@ -20,9 +20,9 @@ class CropModel(tf.keras.Model):
 
     def call(self, inputs):
         x = self.conv_1(inputs)
-        x = x[:, :, :, 0]
+        x = x[ :, :, :, 0]
         x = self.dense_1(x)
         x = self.dense_2(x)
         x = self.dense_out(x)
-        print(x)
+        # print(x)
         return layers.AveragePooling1D(inputs.shape[1])(x)
