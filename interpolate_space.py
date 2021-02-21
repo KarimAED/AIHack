@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from scipy import interpolate
 
+import matplotlib.pyplot as plt
+
 
 inp_1 = "temperatures_interpolated.csv"
 inp_2 = "reordered_evi.csv"
@@ -39,12 +41,25 @@ joint_data.reset_index(drop=True, inplace=True)
 
 print(joint_data.head())
 
-"""t_1_data = joint_data[joint_data["time"] == times[10]]
+t_1_data = joint_data[joint_data["time"] == times[10]]
 
 fig, axes = plt.subplots(ncols=2, figsize=(16, 8))
 ax1, ax2 = axes
-ax1.scatter(t_1_data["long"], t_1_data["lat"], s=10, c=t_1_data["evi"])
-ax2.scatter(t_1_data["long"], t_1_data["lat"], s=10, c=t_1_data["temp"], cmap="hot")
-plt.show()"""
+evi_plot = ax1.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["evi"], cmap="summer")
+temp_plot = ax2.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["temp"], cmap="autumn")
+
+ax1.set_xlabel("longitude")
+ax1.set_ylabel("latitude")
+ax1.set_title("EVI")
+ax2.set_title("Temperature")
+ax2.set_xlabel("longitude")
+ax2.set_ylabel("latitude")
+
+cbar2 = fig.colorbar(temp_plot, ax=ax2)
+cbar2.ax.set_ylabel("K", rotation=0, va="bottom")
+
+cbar = fig.colorbar(evi_plot, ax=ax1)
+cbar.ax.set_ylabel("AU", rotation=0, va="bottom")
+plt.show()
 
 joint_data.to_csv("formatted_inp.csv.gz", index=False, compression="gzip")
