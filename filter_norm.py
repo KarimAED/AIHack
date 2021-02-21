@@ -1,5 +1,5 @@
 import numpy as np
-
+import random
 import tensorflow as tf
 
 
@@ -28,6 +28,16 @@ def filter_norm_split():
     out = np.stack(out[mask]).flatten()
 
     inp = inp.tolist()
+    
+    
+    print(inp)
+    random.seed(0)
+    random.shuffle(inp)
+    random.seed(0)
+    random.shuffle(out)
+    
+
+
 
     inp = tf.ragged.constant(inp, inner_shape=(23, 2))
 
