@@ -33,7 +33,7 @@ def loss(model, x, y, training):
 train_loss_results = []
 train_accuracy_results = []
 
-num_epochs = int(sys.argv[1])
+num_epochs = 50
 
 for epoch in range(num_epochs):
   
@@ -42,10 +42,7 @@ for epoch in range(num_epochs):
   
     # Training loop - using batches of 32
     for i in range(x_tr.shape[0]):
-        
-        sys.stdout.write(f'\r {i}   ')
-        sys.stdout.flush()
-        
+
         single_x = tf.expand_dims(x_tr[i], axis=0)
         single_y = tf.expand_dims(y_tr[i], axis=0)
         

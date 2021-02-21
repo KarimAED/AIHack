@@ -28,24 +28,13 @@ def filter_norm_split():
     out = np.stack(out[mask]).flatten()
 
     inp = inp.tolist()
-    
-    
-    print(inp)
+
     random.seed(0)
     random.shuffle(inp)
     random.seed(0)
     random.shuffle(out)
-    
-
-
 
     inp = tf.ragged.constant(inp, inner_shape=(23, 2))
-
-    # need to shuffle
-    """shuffler = np.random.random(out.size)
-    
-    shuffler = np.argsort(shuffler)
-    """
 
     x_train = inp[:1000, :, :, :]
 

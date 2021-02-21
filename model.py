@@ -4,27 +4,19 @@ import tensorflow as tf
 from tensorflow.keras import layers
 
 
-# event, location (within county), time (within year)
-fake_data = np.random.random(size=(2000, 20, 20, 2))
-fake_target = np.random.random(size=2000)
-
-
 class CropModel(tf.keras.Model):
 
-    def __init__(self, filters=1, kernel_size=5):
+    def __init__(self, filters=20, kernel_size=5):
         super(CropModel, self).__init__()
-        self.conv_1 = layers.Conv1D(filters, kernel_size, input_shape=(20, 2))
-        self.drop_o1 = layers.Dropout(rate=0.25)
-        self.dense_1 = layers.Dense(20)
-        self.dense_2 = layers.Dense(10)
+        self.conv_1 = layers.Conv1D(filters, kernel_size, input_shape=(23, 2))
+        self.dense_1 = layers.Dense(20, activation="relu")
+        self.dense_2 = layers.Dense(10, activation="relu")
         self.dense_out = layers.Dense(1)
 
     def call(self, inputs):
-        x = self.conv_1(inputs)
-        x = x[:, :, :, 0]
-        x = self.drop_o1(x)
+        x = tf.reduce_mean(inputs, axis=1)
+        x = self.conv_1(x)
+        x = layers.GlobalMaxPool1D(data_format="channels_last")(x)
         x = self.dense_1(x)
         x = self.dense_2(x)
-        x = self.dense_out(x)
-        # print(x)
-        return layers.AveragePooling1D(inputs.shape[1])(x)
+        return self.dense_out(x)
