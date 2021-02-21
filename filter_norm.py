@@ -56,10 +56,16 @@ def filter_norm_split():
     x_te = inp_mean_std(x_test)
 
     y_train = out[:1000]
-    y_train -= np.mean(y_train)
-    y_train /= np.std(y_train)
+    y_tr_m = np.mean(y_train)
+    y_tr_std = np.std(y_train)
+    y_train -= y_tr_m
+    y_train /= y_tr_std
     y_test = out[1000:]
-    y_test -= np.mean(y_test)
-    y_test /= np.std(y_test)
+    y_te_m = np.mean(y_test)
+    y_te_std = np.std(y_test)
+    y_test -= y_te_m
+    y_test /= y_te_std
+
+    print(y_tr_m, y_tr_std, y_te_m, y_te_std)
 
     return x_tr, x_te, y_train, y_test

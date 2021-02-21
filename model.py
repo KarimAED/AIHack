@@ -14,13 +14,15 @@ class CropModel(tf.keras.Model):
     def __init__(self, filters=1, kernel_size=5):
         super(CropModel, self).__init__()
         self.conv_1 = layers.Conv1D(filters, kernel_size, input_shape=(20, 2))
+        self.drop_o1 = layers.Dropout(rate=0.25)
         self.dense_1 = layers.Dense(20)
         self.dense_2 = layers.Dense(10)
         self.dense_out = layers.Dense(1)
 
     def call(self, inputs):
         x = self.conv_1(inputs)
-        x = x[ :, :, :, 0]
+        x = x[:, :, :, 0]
+        x = self.drop_o1(x)
         x = self.dense_1(x)
         x = self.dense_2(x)
         x = self.dense_out(x)
