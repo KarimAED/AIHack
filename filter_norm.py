@@ -44,6 +44,15 @@ def filter_norm_split():
 
     x_te = inp_mean_std(x_test)
 
+    x_tr_me = tf.reduce_mean(x_tr, axis=1)
+    x_te_me = tf.reduce_mean(x_te, axis=1)
+
+    x_tr_std = tf.reduce_mean(x_tr, axis=1)
+    x_te_std = tf.reduce_mean(x_te, axis=1)
+
+    x_tr = np.append(np.array(x_tr_me), np.array(x_tr_std), axis=2)
+    x_te = np.append(np.array(x_te_me), np.array(x_te_std), axis=2)
+
     y_train = out[:1000]
     y_tr_m = np.mean(y_train)
     y_tr_std = np.std(y_train)
