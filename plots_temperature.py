@@ -75,23 +75,4 @@ ax.legend()
 ax.set_title("Average County Temperature over Time for Bond")
 plt.show()     
 
-#%%
-time = pd.to_datetime(df_temperature['time']).values.strftime('%y-m%')
-# time = df_temperature['time'].strftime('%y-m%')
-#%%
 
-temp = df_temperature['t2m']
-x = np.arange(len(temp))
-plt.plot(x,temp.values)
-ax=plt.gca()
-ax.set_xticks(x[::1000])
-ax.set_xticklabels(['two', 'four','six', 'eight', 'ten'])
-
-#%%
-
-county_list2 = ["","",...]
-
-# for loop for year 
-    # take mean for temperature over each year
-
-plt.show()
