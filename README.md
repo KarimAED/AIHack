@@ -10,10 +10,10 @@ All of the data figures presented in our report were generated using this code.
 To run this project, install dependencies from pyproject.toml, or manually:
 
 Required:
-	numpy@^1.19.3
-	pandas@^1.2.2
-	scipy@^1.6.1
-	tensorflow@^2.4.1
+	numpy@^1.19.3,
+	pandas@^1.2.2,
+	scipy@^1.6.1,
+	tensorflow@^2.4.1,
 	sklearn@^0.0
 
 For some of the plotting seaborn and geopandas may also be required (gdal DLL must be installed under Windows).
