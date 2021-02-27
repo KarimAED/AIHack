@@ -1,8 +1,7 @@
-import sys
-
 import pandas as pd
 import numpy as np
 from scipy import interpolate
+
 import matplotlib.pyplot as plt
 
 
@@ -38,24 +37,29 @@ joint_data = pd.concat(joint_sliced_data)
 
 joint_data = joint_data.loc[:, ~joint_data.columns.str.contains('^Unnamed')]
 
-t_mean = joint_data["temp"].mean()
-t_std = joint_data["temp"].std()
-
-e_mean = joint_data["evi"].mean()
-e_std = joint_data["evi"].std()
-
-print("Mean temperature, temp std, mean evi and temp std:")
-print(t_mean, t_std, e_mean, e_std)
-joint_data["temp"] = (joint_data["temp"] - t_mean) / t_std
-joint_data["evi"] = (joint_data["evi"] - e_mean) / e_std
 joint_data.reset_index(drop=True, inplace=True)
 
-"""t_1_data = joint_data[joint_data["time"] == times[10]]
+print(joint_data.head())
+
+t_1_data = joint_data[joint_data["time"] == times[10]]
 
 fig, axes = plt.subplots(ncols=2, figsize=(16, 8))
 ax1, ax2 = axes
-ax1.scatter(t_1_data["long"], t_1_data["lat"], s=10, c=t_1_data["evi"])
-ax2.scatter(t_1_data["long"], t_1_data["lat"], s=10, c=t_1_data["temp"], cmap="hot")
-plt.show()"""
+evi_plot = ax1.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["evi"], cmap="summer")
+temp_plot = ax2.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["temp"], cmap="autumn")
+
+ax1.set_xlabel("longitude")
+ax1.set_ylabel("latitude")
+ax1.set_title("EVI")
+ax2.set_title("Temperature")
+ax2.set_xlabel("longitude")
+ax2.set_ylabel("latitude")
+
+cbar2 = fig.colorbar(temp_plot, ax=ax2)
+cbar2.ax.set_ylabel("K", rotation=0, va="bottom")
+
+cbar = fig.colorbar(evi_plot, ax=ax1)
+cbar.ax.set_ylabel("AU", rotation=0, va="bottom")
+plt.show()
 
 joint_data.to_csv("formatted_inp.csv.gz", index=False, compression="gzip")
