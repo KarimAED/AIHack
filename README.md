@@ -21,7 +21,7 @@ For some of the plotting seaborn and geopandas may also be required (gdal DLL mu
 ### Main Pipeline
 You can then proceed to follow the main CNN pipeline.
 
-To generate all processed datasets again and some of the plots (optional, as datasets are included):
+To generate all processed datasets again and some of the plots (mandatory, as data is not included):
 
 1. run EVI_data_reshaping.py and time_interpolation.py to generate 2 datasets aligned in time through interpolation
 2. run interpolate_space.py to generate an input dataset that is aligned in time and space
