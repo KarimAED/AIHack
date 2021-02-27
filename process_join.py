@@ -1,10 +1,10 @@
-import tensorflow as tf
 import pandas as pd
 import numpy as np
 
-from model import CropModel
+inp = pd.read_csv("formatted_inp.csv.gz")
+inp["time"] = inp["time"] - 365  # 2001 jan 1st is now day 1
 
-inp = pd.read_csv("reformatted_inp.csv.gz")
+inp["year"] = 1 + inp["time"] // 365  # Get year after 2001
 out = pd.read_csv("IL_yield.csv")
 out["year"] = out["year"].astype(int) - 2000
 

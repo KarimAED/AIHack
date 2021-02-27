@@ -16,7 +16,7 @@ new_model.add(layers.Flatten())
 new_model.add(layers.Dropout(rate=0.25))
 new_model.add(layers.Dense(16, activation="relu", activity_regularizer="l2"))
 new_model.add(layers.Dropout(rate=0.25))
-new_model.add(layers.Dense(16, activation="relu", activity_regularizer="l2"))
+new_model.add(layers.Dense(16, activation="linear", activity_regularizer="l2"))
 new_model.add(layers.Dense(1, activation="linear"))
 
 opt = tf.keras.optimizers.Adamax(learning_rate=0.1)
