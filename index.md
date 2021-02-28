@@ -16,6 +16,7 @@ Overpopulation and climate change are the challenges of our time. Their combinat
 
 We were provided with a data set containing satellite temperature and biomass (Enhanced Vegetation Index) data across the state of Illinois from 2001 to 2019. This high resolution data in combination with the yield for each county and year was used to make predictions about the expected yield under different conditions, an approach that could readily be extended.
 
+![Input Data Maps](/docs/assets/images/maps.png)
 
 ## The Model
 
