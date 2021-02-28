@@ -20,7 +20,7 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ## The Model
 
-
+![New Algorithm](/docs/assets/images/new_algorithm.PNG)
 
 ## The Results
 
