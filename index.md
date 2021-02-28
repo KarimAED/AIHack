@@ -24,6 +24,6 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ## The Results
 
-![Epoch Loss](/images/epochloss-1.pdf)
-![Epoch Mean Absolute Error](/images/epochmae-1.pdf)
-![Predictions vs Labels](/images/labelprediction-1.pdf)
+![Epoch Loss](/images/epochloss-1.png)
+![Epoch Mean Absolute Error](/images/epochmae-1.png)
+![Predictions vs Labels](/images/labelprediction-1.png)
