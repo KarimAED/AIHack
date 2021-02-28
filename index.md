@@ -10,7 +10,7 @@ The indecisive twigs are:
 
 Overpopulation and climate change are the challenges of our time. Their combination inevitably leads to food shortages, as surging demand and unstable supply drive fierce competition for the very thing we need to survive. While this scenario (obviously) hasn't happened yet, it is not at all unlikely to occur within the next few decades. As part of the AI Hack hosted by the Imperial College Data Science Society, we worked on an approach to use AI to make predictions that help inform agricultural decisions of farmers, companies and governments.
 
-![A Machine](/AIHack/docs/assets/images/machine.jpg)
+![A Machine](/docs/assets/images/machine.jpg)
 
 ## The Data
 
