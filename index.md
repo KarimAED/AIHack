@@ -20,10 +20,10 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ## The Model
 
-![New Algorithm](/new_algorithm.PNG)
+![New Algorithm](/images/new_algorithm.PNG)
 
 ## The Results
 
-![Epoch Loss](/docs/assets/images/epochloss-1.pdf)
-![Epoch Mean Absolute Error](/docs/assets/images/epochmae-1.pdf)
-![Predictions vs Labels](/docs/assets/images/labelprediction-1.pdf)
+![Epoch Loss](/images/epochloss-1.pdf)
+![Epoch Mean Absolute Error](/images/epochmae-1.pdf)
+![Predictions vs Labels](/images/labelprediction-1.pdf)
