@@ -18,6 +18,10 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ![Input Data Maps](/images/maps.png)
 
+![County Temperatures](/images/2015 temperature plot for many counties.png)
+
+![Bond County Temperature](/images/bond.png)
+
 ## The Model
 
 ![New Algorithm](/images/new_algorithm.PNG)
