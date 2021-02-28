@@ -18,7 +18,7 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ![Input Data Maps](/images/maps.png)
 
-![County Temperatures](/images/2015 temperature plot for many counties.png)
+![County Temperatures](/images/2015%20temperature%20plot%20for%20many%20counties.png)
 
 ![Bond County Temperature](/images/bond.png)
 
