@@ -1,6 +1,6 @@
 ## The Team
 
-The indecisive twigs:
+The indecisive twigs are:
 * [Karim Alaa El-Din](https://github.com/karimaed)
 * [Lorenzo Versini](https://github.com/versolollo)
 * [Susan Chen](https://github.com/xiousangchen)
