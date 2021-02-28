@@ -10,20 +10,20 @@ The indecisive twigs are:
 
 Overpopulation and climate change are the challenges of our time. Their combination inevitably leads to food shortages, as surging demand and unstable supply drive fierce competition for the very thing we need to survive. While this scenario (obviously) hasn't happened yet, it is not at all unlikely to occur within the next few decades. As part of the AI Hack hosted by the Imperial College Data Science Society, we worked on an approach to use AI to make predictions that help inform agricultural decisions of farmers, companies and governments.
 
-![A Machine](/docs/assets/images/machine.jpg)
+![A Machine](/images/machine.jpg)
 
 ## The Data
 
 We were provided with a data set containing satellite temperature and biomass (Enhanced Vegetation Index) data across the state of Illinois from 2001 to 2019. This high resolution data in combination with the yield for each county and year was used to make predictions about the expected yield under different conditions, an approach that could readily be extended.
 
-![Input Data Maps](/docs/assets/images/maps.png)
+![Input Data Maps](/images/maps.png)
 
 ## The Model
 
-![New Algorithm](/docs/assets/images/new_algorithm.PNG)
+![New Algorithm](/new_algorithm.PNG)
 
 ## The Results
 
-![Epoch Loss](/docs/assets/images/epochloss.pdf)
-![Epoch Mean Absolute Error](/docs/assets/images/epochmae.pdf)
-![Predictions vs Labels](/docs/assets/images/labelprediction.pdf)
+![Epoch Loss](/docs/assets/images/epochloss-1.pdf)
+![Epoch Mean Absolute Error](/docs/assets/images/epochmae-1.pdf)
+![Predictions vs Labels](/docs/assets/images/labelprediction-1.pdf)
