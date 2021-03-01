@@ -20,9 +20,9 @@ We were provided with a data set containing satellite temperature and biomass (E
 ![Input Data Maps](/images/maps.png)
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/2015%20temperature%20plot%20for%20many%20counties.png" alt="County Temperatures"
-	title="Many County Temperatures" width="250" height="166" />
+	title="Many County Temperatures" width="225" height="150" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/bond.png" alt="Bond County Temperatures"
-	title="Bond County Temperatures" width="250" height="166" />
+	title="Bond County Temperatures" width="225" height="150" />
 ## The Model
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/new_algorithm.PNG" alt="Our Model"
@@ -30,8 +30,8 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ## The Results
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochloss-1.png" alt="Loss History"
-	title="Loss History" width="250" height="250" />
+	title="Loss History" width="225" height="225" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochmae-1.png" alt="MAE History"
-	title="MAE History" width="250" height="250" />
+	title="MAE History" width="225" height="225" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/labelprediction-1.png" alt="Predictions vs Labels"
-	title="Predictions vs Labels (normalized)" width="400" height="400" />
+	title="Predictions vs Labels (normalized)" width="450" height="450" />
