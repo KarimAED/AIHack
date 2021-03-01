@@ -27,6 +27,8 @@ The issue here was that the temperature and EVI data came from different sources
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/bond.png" alt="Bond County Temperatures"
 	title="Bond County Temperatures" width="225" height="150" />
 
+Finally we normalized the data (subtracted mean and divided by std) while keeping training and test set separate.
+
 This left us with:
 
 * 1370 events (each constituting a county and particular year)
