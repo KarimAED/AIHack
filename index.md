@@ -20,9 +20,9 @@ We were provided with a data set containing satellite temperature and biomass (E
 ![Input Data Maps](/images/maps.png)
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/2015%20temperature%20plot%20for%20many%20counties.png" alt="County Temperatures"
-	title="Many County Temperatures" width="450" height="300" />
+	title="Many County Temperatures" width="300" height="200" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/bond.png" alt="Bond County Temperatures"
-	title="Bond County Temperatures" width="450" height="300" />
+	title="Bond County Temperatures" width="300" height="200" />
 ## The Model
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/new_algorithm.PNG" alt="Our Model"
