@@ -30,8 +30,8 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ## The Results
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochloss-1.png" alt="Loss History"
-	title="Loss History" width="250" height="250" />
+	title="Loss History" width="200" height="200" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochmae-1.png" alt="MAE History"
-	title="MAE History" width="250" height="250" />
+	title="MAE History" width="200" height="200" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/labelprediction-1.png" alt="Predictions vs Labels"
-	title="Predictions vs Labels (normalized)" width="250" height="250" />
+	title="Predictions vs Labels (normalized)" width="200" height="200" />
