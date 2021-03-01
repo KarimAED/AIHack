@@ -10,7 +10,8 @@ The indecisive twigs are:
 
 Overpopulation and climate change are the challenges of our time. Their combination inevitably leads to food shortages, as surging demand and unstable supply drive fierce competition for the very thing we need to survive. While this scenario (obviously) hasn't happened yet, it is not at all unlikely to occur within the next few decades. As part of the AI Hack hosted by the Imperial College Data Science Society, we worked on an approach to use AI to make predictions that help inform agricultural decisions of farmers, companies and governments.
 
-![A Machine](/images/machine.jpg)
+<img src="/images/machine.jpg" alt="A Machine"
+	title="Using machines to improve agriculture since 1881" width="150" height="100" />
 
 ## The Data
 
@@ -18,16 +19,19 @@ We were provided with a data set containing satellite temperature and biomass (E
 
 ![Input Data Maps](/images/maps.png)
 
-![County Temperatures](/images/2015%20temperature%20plot%20for%20many%20counties.png)
-
-![Bond County Temperature](/images/bond.png)
-
+<img src="/images/2015%20temperature%20plot%20for%20many%20counties.png" alt="County Temperatures"
+	title="Many County Temperatures" width="150" height="100" />
+<img src="/images/bond.png" alt="Bond County Temperatures"
+	title="Bond County Temperatures" width="150" height="100" />
 ## The Model
 
-![New Algorithm](/images/new_algorithm.PNG)
+<img src="/images/new_algorithm.PNG" alt="Our Model"
+	title="Our Model" width="150" height="100" />
 
 ## The Results
-
-![Epoch Loss](/images/epochloss-1.png)
-![Epoch Mean Absolute Error](/images/epochmae-1.png)
-![Predictions vs Labels](/images/labelprediction-1.png)
+<img src="/images/epochloss-1.png" alt="Loss History"
+	title="Loss History" width="150" height="100" />
+<img src="/images/epochmae-1.png" alt="MAE History"
+	title="MAE History" width="150" height="100" />
+<img src="/images/labelprediction.png" alt="Predictions vs Labels"
+	title="Predictions vs Labels (normalized)" width="150" height="100" />
