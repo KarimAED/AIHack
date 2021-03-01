@@ -33,5 +33,5 @@ We were provided with a data set containing satellite temperature and biomass (E
 	title="Loss History" width="150" height="100" />
 <img src="/images/epochmae-1.png" alt="MAE History"
 	title="MAE History" width="150" height="100" />
-<img src="/images/labelprediction.png" alt="Predictions vs Labels"
+<img src="/images/labelprediction-1.png" alt="Predictions vs Labels"
 	title="Predictions vs Labels (normalized)" width="150" height="100" />
