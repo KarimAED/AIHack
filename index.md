@@ -11,7 +11,7 @@ The indecisive twigs are:
 Overpopulation and climate change are the challenges of our time. Their combination inevitably leads to food shortages, as surging demand and unstable supply drive fierce competition for the very thing we need to survive. While this scenario (obviously) hasn't happened yet, it is not at all unlikely to occur within the next few decades. As part of the AI Hack hosted by the Imperial College Data Science Society, we worked on an approach to use AI to make predictions that help inform agricultural decisions of farmers, companies and governments.
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/machine.jpg" alt="A Machine"
-	title="Using machines to improve agriculture since 1881" width="150" height="100" />
+	title="Using machines to improve agriculture since 1881" width="450" height="300" />
 
 ## The Data
 
@@ -20,18 +20,18 @@ We were provided with a data set containing satellite temperature and biomass (E
 ![Input Data Maps](/images/maps.png)
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/2015%20temperature%20plot%20for%20many%20counties.png" alt="County Temperatures"
-	title="Many County Temperatures" width="150" height="100" />
+	title="Many County Temperatures" width="450" height="300" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/bond.png" alt="Bond County Temperatures"
-	title="Bond County Temperatures" width="150" height="100" />
+	title="Bond County Temperatures" width="450" height="300" />
 ## The Model
 
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/new_algorithm.PNG" alt="Our Model"
-	title="Our Model" width="150" height="100" />
+	title="Our Model" width="450" height="300" />
 
 ## The Results
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochloss-1.png" alt="Loss History"
-	title="Loss History" width="150" height="100" />
+	title="Loss History" width="450" height="300" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/epochmae-1.png" alt="MAE History"
-	title="MAE History" width="150" height="100" />
+	title="MAE History" width="450" height="300" />
 <img src="https://raw.githubusercontent.com/karimaed/AIHack/gh-pages/images/labelprediction-1.png" alt="Predictions vs Labels"
-	title="Predictions vs Labels (normalized)" width="150" height="100" />
+	title="Predictions vs Labels (normalized)" width="450" height="300" />
