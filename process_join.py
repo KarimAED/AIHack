@@ -11,7 +11,7 @@ out["year"] = out["year"].astype(int) - 2000
 out_counties = np.sort(out["county"].unique())
 
 
-inp = inp.loc[:, ~inp.columns.str.contains('^Unnamed')]
+inp = inp.loc[:, ~inp.columns.str.contains("^Unnamed")]
 
 years = inp["year"].unique()
 counties = np.sort(inp["county"].unique())
@@ -34,7 +34,9 @@ for year in years:
             event.append(loc_data.T)
         event = np.array(event)
         events_inp.append(event)
-        events_out.append(out[(out["year"] == year) & (out["county"] == county)]["yield"].values)
+        events_out.append(
+            out[(out["year"] == year) & (out["county"] == county)]["yield"].values
+        )
 
 
 events_inp = np.array(events_inp)

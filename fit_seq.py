@@ -22,11 +22,21 @@ new_model.add(layers.Dense(1, activation="linear"))
 opt = tf.keras.optimizers.Adamax(learning_rate=0.1)
 new_model.compile(optimizer=opt, loss="mse", metrics=["mae"])
 
-stopper = tf.keras.callbacks.EarlyStopping(monitor="val_mae", patience=20, min_delta=0.0001)
+stopper = tf.keras.callbacks.EarlyStopping(
+    monitor="val_mae", patience=20, min_delta=0.0001
+)
 
 
-hist = new_model.fit(x_tr, y_tr, batch_size=10, shuffle=True, validation_split=0.1,
-                     epochs=1000, verbose=2, callbacks=[stopper])
+hist = new_model.fit(
+    x_tr,
+    y_tr,
+    batch_size=10,
+    shuffle=True,
+    validation_split=0.1,
+    epochs=1000,
+    verbose=2,
+    callbacks=[stopper],
+)
 
 pt = new_model.evaluate(x_te, y_te)
 

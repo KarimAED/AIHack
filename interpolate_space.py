@@ -35,7 +35,7 @@ for i, df in enumerate(sliced_data_1):
 
 joint_data = pd.concat(joint_sliced_data)
 
-joint_data = joint_data.loc[:, ~joint_data.columns.str.contains('^Unnamed')]
+joint_data = joint_data.loc[:, ~joint_data.columns.str.contains("^Unnamed")]
 
 joint_data.reset_index(drop=True, inplace=True)
 
@@ -45,8 +45,12 @@ t_1_data = joint_data[joint_data["time"] == times[10]]
 
 fig, axes = plt.subplots(ncols=2, figsize=(16, 8))
 ax1, ax2 = axes
-evi_plot = ax1.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["evi"], cmap="summer")
-temp_plot = ax2.scatter(t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["temp"], cmap="autumn")
+evi_plot = ax1.scatter(
+    t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["evi"], cmap="summer"
+)
+temp_plot = ax2.scatter(
+    t_1_data["long"], t_1_data["lat"], s=20, c=t_1_data["temp"], cmap="autumn"
+)
 
 ax1.set_xlabel("longitude")
 ax1.set_ylabel("latitude")
